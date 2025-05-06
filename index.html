@@ -1,158 +1,56 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lountry | Discord</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.discordapp.com/icons/1157841158763397140/a_0e1e7c3d8a3e5e5e5e5e5e5e5e5e5e5?size=256">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://cdn.discordapp.com/icons/1157841158763397140/a_0e1e7c3d8a3e5e5e5e5e5e5e5e5e5e5?size=80" alt="Lountry">
+                <h1>Lountry</h1>
+            </div>
+            <a href="https://discord.gg/lountry" class="join-btn">Присоединиться</a>
+        </header>
 
-body {
-    background-color: #111;
-    color: #fff;
-    line-height: 1.6;
-}
+        <main>
+            <section class="hero">
+                <h2>Добро пожаловать в Lountry</h2>
+                <p>Уютное сообщество для общения и игр</p>
+                <img src="https://media.discordapp.net/attachments/1157841158763397140/1161501899488301106/standard_1.gif?ex=6538a1a9&is=65262ca9&hm=8a1c1a8a0e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5&" alt="Сервер Lountry" class="server-banner">
+            </section>
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
+            <section class="info">
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h3>Сообщество</h3>
+                    <p>Активные участники и дружеская атмосфера</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Игры</h3>
+                    <p>Регулярные игровые ивенты и турниры</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Общение</h3>
+                    <p>Интересные беседы на любые темы</p>
+                </div>
+            </section>
+        </main>
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #2c2c2c;
-    margin-bottom: 30px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.logo h1 {
-    font-weight: 600;
-    color: #ff3a3a;
-}
-
-.join-btn {
-    background-color: #ff3a3a;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.join-btn:hover {
-    background-color: #ff1a1a;
-    transform: translateY(-2px);
-}
-
-.hero {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.hero h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #ff3a3a;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    color: #aaa;
-    margin-bottom: 20px;
-}
-
-.server-banner {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-top: 20px;
-    box-shadow: 0 4px 15px rgba(255, 58, 58, 0.2);
-}
-
-.info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.card {
-    background: #1e1e1e;
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 58, 58, 0.1);
-}
-
-.card i {
-    font-size: 2rem;
-    color: #ff3a3a;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-
-.card p {
-    color: #aaa;
-    font-size: 0.9rem;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-top: 1px solid #2c2c2c;
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: #777;
-}
-
-.discord-link {
-    color: #7289da;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .info {
-        grid-template-columns: 1fr;
-    }
-    
-    footer {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-}
+        <footer>
+            <p>© 2023 Lountry Discord Server</p>
+            <a href="https://discord.gg/lountry" class="discord-link">
+                <i class="fab fa-discord"></i> discord.gg/lountry
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
