@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lountry | Discord</title>
+    <title>Lountry | Discord с экономикой</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,35 +22,109 @@
         <main>
             <section class="hero">
                 <h2>Добро пожаловать в Lountry</h2>
-                <p>Уютное сообщество для общения и игр</p>
+                <p>Уникальное сообщество с собственной экономикой и играми</p>
                 <img src="https://media.discordapp.net/attachments/1280441134841073699/1368988401440784404/Frame_15.png?ex=681b8acd&is=681a394d&hm=4ac053c63cb0ddcfd774ba2cb08afc2cd41eb5c6cfd939da68fd4824481bc435&=&format=webp&quality=lossless&width=1240&height=699" alt="Сервер Lountry" class="server-banner">
             </section>
 
-            <section class="info">
-                <div class="card">
-                    <i class="fas fa-users"></i>
-                    <h3>Сообщество</h3>
-                    <p>Активные участники и дружеская атмосфера</p>
+            <section class="economy">
+                <h2><i class="fas fa-coins"></i> Наша экономика</h2>
+                <div class="economy-grid">
+                    <div class="economy-card">
+                        <i class="fas fa-wallet"></i>
+                        <h3>Валюта LNR</h3>
+                        <p>Зарабатывайте нашу валюту, участвуя в активностях сервера</p>
+                    </div>
+                    <div class="economy-card">
+                        <i class="fas fa-store"></i>
+                        <h3>Магазин</h3>
+                        <p>Покупайте роли, привилегии и уникальные предметы</p>
+                    </div>
+                    <div class="economy-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Игровая система</h3>
+                        <p>Участвуйте в турнирах и получайте награды</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-gamepad"></i>
-                    <h3>Игры</h3>
-                    <p>Регулярные игровые ивенты и турниры</p>
+            </section>
+
+            <section class="staff">
+                <h2><i class="fas fa-user-shield"></i> Наша команда</h2>
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <img src="https://cdn.discordapp.com/avatars/123456789012345678/a_abcdef1234567890abcdef1234567890.webp?size=128" alt="Основатель">
+                        <h3>Основатель</h3>
+                        <p>@Username</p>
+                    </div>
+                    <div class="staff-card">
+                        <img src="https://cdn.discordapp.com/avatars/234567890123456789/a_abcdef1234567890abcdef1234567890.webp?size=128" alt="Администратор">
+                        <h3>Администратор</h3>
+                        <p>@Username</p>
+                    </div>
+                    <div class="staff-card">
+                        <img src="https://cdn.discordapp.com/avatars/345678901234567890/a_abcdef1234567890abcdef1234567890.webp?size=128" alt="Модератор">
+                        <h3>Модератор</h3>
+                        <p>@Username</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-comments"></i>
-                    <h3>Общение</h3>
-                    <p>Интересные беседы на любые темы</p>
+            </section>
+
+            <section class="stats">
+                <h2><i class="fas fa-chart-line"></i> Статистика сервера</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-value" id="total-members">1250</div>
+                        <div class="stat-label">Всего участников</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-wifi"></i>
+                        <div class="stat-value" id="online-members">348</div>
+                        <div class="stat-label">В сети</div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-microphone"></i>
+                        <div class="stat-value" id="voice-members">87</div>
+                        <div class="stat-label">В голосовых</div>
+                    </div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>© 2023 Lountry Discord Server</p>
-            <a href="https://discord.gg/lountry" class="discord-link">
-                <i class="fab fa-discord"></i> discord.gg/lountry
-            </a>
+            <div class="footer-content">
+                <p>© 2023 Lountry Discord Server</p>
+                <div class="server-stats">
+                    <span id="live-members">348</span> онлайн • 
+                    <span id="live-voice">87</span> в голосовых • 
+                    <span id="live-total">1250</span> всего
+                </div>
+                <a href="https://discord.gg/lountry" class="discord-link">
+                    <i class="fab fa-discord"></i> discord.gg/lountry
+                </a>
+            </div>
         </footer>
     </div>
+
+    <script>
+
+        function updateStats() {
+
+            const total = 1250 + Math.floor(Math.random() * 10);
+            const online = 350 + Math.floor(Math.random() * 20) - 10;
+            const voice = 85 + Math.floor(Math.random() * 10) - 5;
+            
+            document.getElementById('total-members').textContent = total;
+            document.getElementById('online-members').textContent = online;
+            document.getElementById('voice-members').textContent = voice;
+            
+            document.getElementById('live-members').textContent = online;
+            document.getElementById('live-voice').textContent = voice;
+            document.getElementById('live-total').textContent = total;
+        }
+
+        // Обновляем статистику при загрузке и каждые 30 секунд
+        updateStats();
+        setInterval(updateStats, 30000);
+    </script>
 </body>
 </html>
